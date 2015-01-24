@@ -1,0 +1,422 @@
+<!--
+slidedeck: A modification of the Google IO 2012 HTML5 slide template
+URL: https://github.com/rmcgibbo/slidedeck
+
+Based on https://github.com/francescolaffi/elastic-google-io-slides, and
+ultimately:
+
+Google IO 2012 HTML5 Slide Template
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahe <lukem@google.com>
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Benchmarking Small Molecule Forcefields at the Scale of NIST</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+   <link rel="shortcut icon" href=" figures/membrane.png"/> 
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="all" href="theme/css/custom.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides", src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js"></script>
+
+
+  <!-- MathJax support  -->
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    showProcessingMessages: false,
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    TeX: {
+      extensions: ["color.js"]
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <div style="display:hidden">
+  \[
+    \definecolor{data}{RGB}{18,110,213}
+    \definecolor{unknown}{RGB}{217,86,16}
+    \definecolor{learned}{RGB}{175,114,176}
+  \]
+  </div>
+
+</head>
+
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+<slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+
+    <h1> Benchmarking Small Molecule Forcefields at the Scale of NIST</h1>
+    <h2></h2>
+    <p> Kyle A. Beauchamp, Choderalab@MSKCC<br/> Slides here: TODO</p>
+  </hgroup>
+</slide>
+
+
+<slide  >
+  
+    <hgroup>
+      <h2>GPUs: MD Sampling is (finally) Easy</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><center>
+<img height=475 src=figures/TitanNew.jpg />
+</center></p>
+<footer class="source"> 
+E.g. OpenMM, Gromacs, AMBER, Charmm, NAMD, DESMOND, ACEMD
+</footer></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Forcefields: Are we there yet?</h2>
+      <h3>Water and protein: getting better</h3>
+    </hgroup>
+    <article ><p><center>
+<img height=425 src=figures/plos_forcefield.png />
+</center></p>
+<footer class="source"> 
+Lindorff-Larsen, 2012
+</footer></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Forcefields: Are we there yet?</h2>
+      <h3>Small molecules: needs work</h3>
+    </hgroup>
+    <article ><p><center>
+<img height=450 src=figures/mobley_dielectric.png />
+</center></p>
+<footer class="source"> 
+Fennell, Mobley, 2014
+</footer></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>What's holding us back?  Data access</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
+<li>Forcefields should be consistent with available data</li>
+<li>Datasets (and forcefields) should improve over time</li>
+<li>Many datasets are heterogeneous and offline</li>
+</ul>
+<p><center>
+<img height=300 src=figures/meat-grinder-gun.jpg />
+</center></p>
+<footer class="source"> 
+See also work by Wang, Pande, Swope, Case, MacKerell, Ponder, Best, Hummer, Bruschweiler.
+</footer></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+    <!-- <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside> -->
+    <hgroup class="auto-fadein">
+      <h2>WANTED: Curated, Machine-Readible, Open archive of physicochemical measurements!</h2>
+      <h3></h3>
+    </hgroup>
+  
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>NIST Thermodynamics Research Center</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><center>
+<img height=500 src=figures/boulder3.jpg />
+</center></p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Data Capture at NIST TRC: ThermoML</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><center>
+<img height=525 src="https://docs.google.com/drawings/d/1At1SJcpKbbe28izMj3S4bodHuXtNe4dXiJpBX7Y_QkE/pub?w=1440&h=1080"/>
+</center></p>
+<footer class="source"> 
+J. Chem. Eng. Dat., J. Chem. Therm., Fluid Phase Eq., Therm. Acta, Int. J. Therm.
+</footer></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>ThermoML: Rapid Growth</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><center>
+<img height=475 src=figures/thermoml_by_time.png />
+</center></p>
+<footer class="source"> 
+Chiraco, 2013
+</footer></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+    <!-- <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside> -->
+    <hgroup class="auto-fadein">
+      <h2>Can we leverage ThermoML for forcefield validation?</h2>
+      <h3></h3>
+    </hgroup>
+  
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>How many measurements?</h2>
+      <h3>Neat Liquids?</h3>
+    </hgroup>
+    <article ><ul>
+<li>130074 Densities</li>
+<li>1649 Dielectrics</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>How many measurements?</h2>
+      <h3>Druglike elements?</h3>
+    </hgroup>
+    <article ><ul>
+<li>120410 Densities</li>
+<li>1649 Dielectrics</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>How many measurements?</h2>
+      <h3>Ten or fewer heavy atoms?</h3>
+    </hgroup>
+    <article ><ul>
+<li>67897 Densities</li>
+<li>1567 Dielectrics</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>How many measurements?</h2>
+      <h3>Ambient temperature and pressure?</h3>
+    </hgroup>
+    <article ><ul>
+<li>13598 Densities</li>
+<li>461 Dielectrics</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>How many measurements?</h2>
+      <h3>After averaging over duplicated measurements</h3>
+    </hgroup>
+    <article ><ul>
+<li>3591 Densities</li>
+<li>432 Dielectrics</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>How many measurements?</h2>
+      <h3>Having both density and dielectric measurements</h3>
+    </hgroup>
+    <article ><ul>
+<li>245</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Benchmarking 245 densities and dielectrics</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
+<li>OpenMM 6.2</li>
+<li>GAFF</li>
+<li>Converge each density to 0.0002 g / mL</li>
+</ul>
+<p><center>
+<img height=300 src=figures/openmm.png />
+</center></p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Static Dielectrics: Underestimated</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><center>
+<img height=500 src=figures/./dielectrics_thermoml_nocorr.png />
+</center></p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>GAFF fails for nonpolar dielectrics</h2>
+      <h3>Missing atomic polarizibilities</h3>
+    </hgroup>
+    <article ><p>Expt: 2.2
+GAFF: 1.0</p>
+<p><center>
+<img height=400 src=figures/Carbon-tetrachloride-3D-balls.png />
+</center></p>
+<footer class="source"> 
+Fennell, 2012
+</footer></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Polarizability Corrections</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p>Counting atoms explains molecular polarizability to within 2%</p>
+<p><center>
+<img height=225 src=figures/polarizability_eqn.png />
+</center></p>
+<footer class="source"> 
+Sales, 2012.  J. Chem. Inf. Comp. Sci.
+</footer>
+
+<p>Predicts a correction of 0.52 for water; compare to 0.79, which was used in developing TIP4P-EW.</p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Static Dielectrics with Polarizibility</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><center>
+<img height=525 src=figures/dielectrics_thermoml.png />
+</center></p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Conclusions</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
+<li>Small molecule forcefields need help</li>
+<li>ThermoML is a NIST-funded, curated, and growing set of physicochem data</li>
+<li>We built a semi-automated benchmark of densities and dielectrics in ThermoML</li>
+<li>Elemental polarizability models improves comparisons to measured dielectric constants</li>
+<li>Can we validate forcefields in real-time on all publication quality measurements?</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>People</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
+<li>Julie Behr (MSKCC)</li>
+<li>Patrick Grinaway (MSKCC)</li>
+<li>Bas Rustenburg (MSKCC)</li>
+<li>John Chodera (MSKCC)</li>
+<li>Michael Shirts (UVA)</li>
+<li>Kenneth Kroenlein (NIST)</li>
+</ul>
+<footer class="source"> 
+Special thanks to Vijay Pande, Lee-Ping Wang, Peter Eastman, Robert McGibbon, Jason Swails, David Mobley, Christopher Bayly, and members of Chodera lab. \n 
+See also work by van der Spoel, JCTC, 2011. and Bioinformatics, 2012.
+</footer></article>
+ 
+</slide>
+
+
+<slide class="thank-you-slide segue nobackground">
+  <!-- <aside class="gdbar right"><img src="images/google_developers_icon_128.png"></aside> -->
+  <article class="flexbox vleft auto-fadein">
+    <h2></h2>
+    <p></p>
+  </article>
+  <p data-config-contact class="auto-fadein"></p>
+  </p>
+</slide>
+
+<slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
