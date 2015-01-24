@@ -222,6 +222,7 @@ title: People
 
 
 <footer class="source"> 
-Special thanks to Vijay Pande, Lee-Ping Wang, Peter Eastman, Robert McGibbon, Jason Swails, David Mobley, Christopher Bayly, and members of Chodera lab. \n 
+Special thanks to Vijay Pande, Lee-Ping Wang, Peter Eastman, Robert McGibbon, Jason Swails, David Mobley, Christopher Bayly, and members of Chodera lab. 
+
 See also work by van der Spoel, JCTC, 2011. and Bioinformatics, 2012.
 </footer>
