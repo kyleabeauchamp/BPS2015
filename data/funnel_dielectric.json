@@ -1,0 +1,28 @@
+{
+  "item":[
+    {
+      "value":"1649",
+      "label":"Single Component"
+    },
+    {
+      "value":"1649",
+      "label":"Druglike Elements"
+    },
+    {
+      "value":"1567",
+      "label":"Heavy Atoms"
+    },
+    {
+      "value":"461",
+      "label":"Ambient Temperature and Pressure"
+    },
+    {
+      "value":"432",
+      "label":"Average Duplicated Conditions"
+    },
+    {
+      "value":"245",
+      "label":"Density + Dielectric"
+    }
+  ]
+}
