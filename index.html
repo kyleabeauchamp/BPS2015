@@ -74,13 +74,13 @@ URL: https://code.google.com/p/io-2012-slides
   
     <hgroup>
       <h2>GPUs: MD Sampling is (finally) Easy</h2>
-      <h3></h3>
+      <h3>128 ns / day on a $999 GTX Titan (DHFR, OpenMM 6.1)</h3>
     </hgroup>
     <article ><p><center>
-<img height=475 src=figures/TitanNew.jpg />
+<img height=420 src=figures/TitanNew.jpg />
 </center></p>
 <footer class="source"> 
-E.g. OpenMM, Gromacs, AMBER, Charmm, NAMD, DESMOND, ACEMD
+Benchmarks at openmm.org See also: Gromacs, AMBER, Charmm, NAMD, DESMOND, ACEMD
 </footer></article>
  
 </slide>
@@ -95,7 +95,7 @@ E.g. OpenMM, Gromacs, AMBER, Charmm, NAMD, DESMOND, ACEMD
 <img height=425 src=figures/plos_forcefield.png />
 </center></p>
 <footer class="source"> 
-Lindorff-Larsen, 2012
+Lindorff-Larsen, PLOS One, 2012.  See also Beauchamp, JCTC, 2012.
 </footer></article>
  
 </slide>
@@ -103,11 +103,11 @@ Lindorff-Larsen, 2012
 <slide  >
   
     <hgroup>
-      <h2>Forcefields: Are we there yet?</h2>
-      <h3>Small molecules: needs work</h3>
+      <h2>Small molecule forcefields need work</h2>
+      <h3></h3>
     </hgroup>
     <article ><p><center>
-<img height=450 src=figures/mobley_dielectric.png />
+<img height=500 src=figures/mobley_dielectric.png />
 </center></p>
 <footer class="source"> 
 Fennell, Mobley, 2014
@@ -118,16 +118,15 @@ Fennell, Mobley, 2014
 <slide  >
   
     <hgroup>
-      <h2>What's holding us back?  Data access</h2>
+      <h2>Data access is hamstringing simulation</h2>
       <h3></h3>
     </hgroup>
     <article ><ul>
-<li>Forcefields should be consistent with available data</li>
-<li>Datasets (and forcefields) should improve over time</li>
-<li>Many datasets are heterogeneous and offline</li>
+<li>Forcefields should be consistent with all available data</li>
+<li>Most datasets are heterogeneous, offline, and static</li>
 </ul>
 <p><center>
-<img height=300 src=figures/meat-grinder-gun.jpg />
+<img height=350 src=figures/qc_supply_grinder_510482.jpg />
 </center></p>
 <footer class="source"> 
 See also work by Wang, Pande, Swope, Case, MacKerell, Ponder, Best, Hummer, Bruschweiler.
@@ -164,25 +163,22 @@ See also work by Wang, Pande, Swope, Case, MacKerell, Ponder, Best, Hummer, Brus
       <h3></h3>
     </hgroup>
     <article ><p><center>
-<img height=525 src="https://docs.google.com/drawings/d/1At1SJcpKbbe28izMj3S4bodHuXtNe4dXiJpBX7Y_QkE/pub?w=1440&h=1080"/>
-</center></p>
-<footer class="source"> 
-J. Chem. Eng. Dat., J. Chem. Therm., Fluid Phase Eq., Therm. Acta, Int. J. Therm.
-</footer></article>
+<img height=540 src="https://docs.google.com/drawings/d/1At1SJcpKbbe28izMj3S4bodHuXtNe4dXiJpBX7Y_QkE/pub?w=1440&h=1080"/>
+</center></p></article>
  
 </slide>
 
 <slide  >
   
     <hgroup>
-      <h2>ThermoML: Rapid Growth</h2>
+      <h2>ThermoML is rapidly growing</h2>
       <h3></h3>
     </hgroup>
     <article ><p><center>
 <img height=475 src=figures/thermoml_by_time.png />
 </center></p>
 <footer class="source"> 
-Chiraco, 2013
+Figure from Chiraco, J. Chem. Eng. Dat., 2013.
 </footer></article>
  
 </slide>
@@ -294,11 +290,11 @@ Chiraco, 2013
 <slide  >
   
     <hgroup>
-      <h2>Static Dielectrics: Underestimated</h2>
+      <h2>Static dielectrics are consistently underestimated</h2>
       <h3></h3>
     </hgroup>
     <article ><p><center>
-<img height=500 src=figures/./dielectrics_thermoml_nocorr.png />
+<img height=450 src=figures/./dielectrics_thermoml_nocorr.png />
 </center></p></article>
  
 </slide>
@@ -334,7 +330,7 @@ Fennell, 2012
 Sales, 2012.  J. Chem. Inf. Comp. Sci.
 </footer>
 
-<p>Predicts a correction of 0.52 for water; compare to 0.79, which was used in developing TIP4P-EW.</p></article>
+<p>Predicts a correction of 0.52 for water dielectric; compare to 0.79, which was used in developing TIP4P-EW.</p></article>
  
 </slide>
 

@@ -5,13 +5,14 @@
 
 ---
 title: GPUs: MD Sampling is (finally) Easy
+subtitle: 128 ns / day on a $999 GTX Titan (DHFR, OpenMM 6.1)
 
 <center>
-<img height=475 src=figures/TitanNew.jpg />
+<img height=420 src=figures/TitanNew.jpg />
 </center>
 
 <footer class="source"> 
-E.g. OpenMM, Gromacs, AMBER, Charmm, NAMD, DESMOND, ACEMD
+Benchmarks at openmm.org See also: Gromacs, AMBER, Charmm, NAMD, DESMOND, ACEMD
 </footer>
 
 
@@ -25,16 +26,14 @@ subtitle: Water and protein: getting better
 </center>
 
 <footer class="source"> 
-Lindorff-Larsen, 2012
+Lindorff-Larsen, PLOS One, 2012.  See also Beauchamp, JCTC, 2012.
 </footer>
 
 ---
-title: Forcefields: Are we there yet?
-subtitle: Small molecules: needs work
-
+title: Small molecule forcefields need work
 
 <center>
-<img height=450 src=figures/mobley_dielectric.png />
+<img height=500 src=figures/mobley_dielectric.png />
 </center>
 
 <footer class="source"> 
@@ -43,14 +42,13 @@ Fennell, Mobley, 2014
 
 
 ---
-title: What's holding us back?  Data access
+title: Data access is hamstringing simulation
 
-- Forcefields should be consistent with available data
-- Datasets (and forcefields) should improve over time
-- Many datasets are heterogeneous and offline
+- Forcefields should be consistent with all available data
+- Most datasets are heterogeneous, offline, and static
 
 <center>
-<img height=300 src=figures/meat-grinder-gun.jpg />
+<img height=350 src=figures/qc_supply_grinder_510482.jpg />
 </center>
 
 <footer class="source"> 
@@ -76,22 +74,18 @@ title: Data Capture at NIST TRC: ThermoML
 
 
 <center>
-<img height=525 src="https://docs.google.com/drawings/d/1At1SJcpKbbe28izMj3S4bodHuXtNe4dXiJpBX7Y_QkE/pub?w=1440&h=1080"/>
+<img height=540 src="https://docs.google.com/drawings/d/1At1SJcpKbbe28izMj3S4bodHuXtNe4dXiJpBX7Y_QkE/pub?w=1440&h=1080"/>
 </center>
 
-<footer class="source"> 
-J. Chem. Eng. Dat., J. Chem. Therm., Fluid Phase Eq., Therm. Acta, Int. J. Therm.
-</footer>
-
 ---
-title: ThermoML: Rapid Growth
+title: ThermoML is rapidly growing
 
 <center>
 <img height=475 src=figures/thermoml_by_time.png />
 </center>
 
 <footer class="source"> 
-Chiraco, 2013
+Figure from Chiraco, J. Chem. Eng. Dat., 2013.
 </footer>
 
 
@@ -157,10 +151,10 @@ title: Benchmarking 245 densities and dielectrics
 
 
 ---
-title:  Static Dielectrics: Underestimated
+title:  Static dielectrics are consistently underestimated
 
 <center>
-<img height=500 src=figures/./dielectrics_thermoml_nocorr.png />
+<img height=450 src=figures/./dielectrics_thermoml_nocorr.png />
 </center>
 
 ---
@@ -192,7 +186,7 @@ Counting atoms explains molecular polarizability to within 2%
 Sales, 2012.  J. Chem. Inf. Comp. Sci.
 </footer>
 
-Predicts a correction of 0.52 for water; compare to 0.79, which was used in developing TIP4P-EW.
+Predicts a correction of 0.52 for water dielectric; compare to 0.79, which was used in developing TIP4P-EW.
 
 ---
 title: Static Dielectrics with Polarizibility
