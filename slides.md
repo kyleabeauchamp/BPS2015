@@ -94,67 +94,62 @@ title: Can we leverage ThermoML for forcefield validation?
 class: segue dark nobackground
 
 ---
-title: How many measurements?
-subtitle: Neat Liquids?
+title: Density and dielectric as forcefield probes
 
-- 130074 Densities
-- 1649 Dielectrics
+$$\rho = \langle \frac{M}{V} \rangle$$
 
+$$\epsilon(0) = 1 + \frac{4\pi}{3} \frac{\langle M \cdot M \rangle - \langle M \rangle \cdot \langle M \rangle}{V k_B T}$$
 
----
-title: How many measurements?
-subtitle: Druglike elements?
-
-- 120410 Densities
-- 1649 Dielectrics
+<footer class="source"> 
+See also van der Spoel, JCTC, 2011 and Fennell, 2012.
+</footer>
 
 
 ---
 title: How many measurements?
-subtitle: Ten or fewer heavy atoms?
 
-- 67897 Densities
-- 1567 Dielectrics
-
----
-title: How many measurements?
-subtitle: Ambient temperature and pressure?
-
-- 13598 Densities
-- 461 Dielectrics
-
----
-title: How many measurements?
-subtitle: After averaging over duplicated measurements
-
-- 3591 Densities
-- 432 Dielectrics
-
----
-title: How many measurements?
-subtitle: Having both density and dielectric measurements
-
-- 245
-
+<center>
+<img height=450 src=figures/funnel.png />
+</center>
 
 ---
 title: Benchmarking 245 densities and dielectrics
 
 - OpenMM 6.2
-- GAFF
-- Converge each density to 0.0002 g / mL
+- GAFF + AM1BCC (Antechamber + OpenEye)
+- PME + Langevin 1 fs + Monte Carlo Barostat + Fixed HBond
+- Converge each density to 0.0002 g / mL ($\approx$ expt. error)
 
 
 <center>
-<img height=300 src=figures/openmm.png />
+<img height=200 src=figures/openmm.png />
 </center>
 
+---
+title:  Densities are in the ballpark
+
+<center>
+<img height=500 src=figures/densities_thermoml.png />
+</center>
+
+
+
+---
+title:  Density errors vary by functional group 
+
+<center>
+<img height=475 src=./figures/functional_group_logerr_density.png />
+</center>
+
+<footer class="source"> 
+Compare to OW discussion in Fennell, Mobley, 2014
+</footer>
 
 ---
 title:  Static dielectrics are consistently underestimated
 
 <center>
-<img height=450 src=figures/./dielectrics_thermoml_nocorr.png />
+<img height=450 src=figures/dielectrics_thermoml_nocorr.png />
 </center>
 
 ---
