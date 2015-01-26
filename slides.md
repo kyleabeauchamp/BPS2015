@@ -182,7 +182,7 @@ title: Empirical polarizability reduces bias
 title: Where do we go from here?
 
 - Small molecule forcefields need help
-- ThermoML is a NIST-funded, curated, and growing set of physicochemical data
+- ThermoML is a NIST-funded, machine-readable, and growing set of physicochemical data
 - We built a semi-automated benchmark of densities and dielectrics in ThermoML
 - Empirical polarizability model improves comparisons to measured dielectric constants
 - Can we validate forcefields in real-time on all publication quality measurements?
