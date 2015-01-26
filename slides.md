@@ -97,11 +97,13 @@ class: segue dark nobackground
 title: Density and dielectric as forcefield tests
 
 - Sensitive to nonbonded parameters
-- Simple geometric interpretation
+- Simple ensemble average geometric interpretation
 
 $$\rho = \langle \frac{M}{V} \rangle$$
 
-$$\epsilon(0) = 1 + \frac{4\pi}{3} \frac{\langle \mu \cdot \mu \rangle - \langle \mu \rangle \cdot \langle \mu \rangle}{V k_B T}$$
+$$\epsilon = 1 + \frac{4\pi}{3} \frac{\langle \mu \cdot \mu \rangle - \langle \mu \rangle \cdot \langle \mu \rangle}{V k_B T}$$
+
+$$U = \frac{1}{4 \pi \epsilon} \frac{q_1 q_2}{r} \propto \frac{1}{\epsilon}$$
 
 <footer class="source"> 
 See also van der Spoel, JCTC, 2011 and Fennell, 2012.
