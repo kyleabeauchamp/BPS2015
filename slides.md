@@ -172,10 +172,10 @@ title: Atom counting predicts molecular polarizability to within 2%
 </center>
 
 ---
-title: Empirical polarizability reduces bias
+title: Empirical atomic polarizability corrections reduce bias
 
 <center>
-<img height=525 src=figures/dielectrics_thermoml.png />
+<img height=450 src=figures/dielectrics_thermoml.png />
 </center>
 
 ---
