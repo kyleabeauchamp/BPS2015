@@ -37,12 +37,12 @@ title: Small molecule forcefields need work
 </center>
 
 <footer class="source"> 
-Fennell, Mobley, 2014
+Fennell, Mobley.  J. Phys. Chem. B. 2014
 </footer>
 
 
 ---
-title: Data access is hamstringing simulation
+title: Data access is killing forcefields
 
 - Forcefields should be consistent with all available data
 - Most datasets are heterogeneous, offline, and static
@@ -57,7 +57,7 @@ See also work by Wang, Pande, Swope, Case, MacKerell, Ponder, Best, Hummer, Brus
 
 
 ---
-title: WANTED: Curated, Machine-Readible, Open archive of physicochemical measurements!
+title: WANTED: Reliable, machine-readible, open archive of physicochemical measurements!
 class: segue dark nobackground
 
 
@@ -94,11 +94,14 @@ title: Can we leverage ThermoML for forcefield validation?
 class: segue dark nobackground
 
 ---
-title: Density and dielectric as forcefield probes
+title: Density and dielectric as forcefield tests
+
+- Sensitive to nonbonded parameters
+- Simple geometric interpretation
 
 $$\rho = \langle \frac{M}{V} \rangle$$
 
-$$\epsilon(0) = 1 + \frac{4\pi}{3} \frac{\langle M \cdot M \rangle - \langle M \rangle \cdot \langle M \rangle}{V k_B T}$$
+$$\epsilon(0) = 1 + \frac{4\pi}{3} \frac{\langle \mu \cdot \mu \rangle - \langle \mu \rangle \cdot \langle \mu \rangle}{V k_B T}$$
 
 <footer class="source"> 
 See also van der Spoel, JCTC, 2011 and Fennell, 2012.
@@ -106,17 +109,17 @@ See also van der Spoel, JCTC, 2011 and Fennell, 2012.
 
 
 ---
-title: How many measurements?
+title: How many measurements are there?
 
 <center>
 <img height=450 src=figures/funnel.png />
 </center>
 
 ---
-title: Benchmarking 245 densities and dielectrics
+title: Benchmarking neat liquid densities and dielectrics
 
 - OpenMM 6.2
-- GAFF + AM1BCC (Antechamber + OpenEye)
+- GAFF + AM1-BCC (Antechamber + OpenEye)
 - PME + Langevin 1 fs + Monte Carlo Barostat + Fixed HBond
 - Converge each density to 0.0002 g / mL ($\approx$ expt. error)
 
@@ -135,17 +138,6 @@ title:  Densities are in the ballpark
 
 
 ---
-title:  Density errors vary by functional group 
-
-<center>
-<img height=475 src=./figures/functional_group_logerr_density.png />
-</center>
-
-<footer class="source"> 
-Compare to OW discussion in Fennell, Mobley, 2014
-</footer>
-
----
 title:  Static dielectrics are consistently underestimated
 
 <center>
@@ -153,65 +145,59 @@ title:  Static dielectrics are consistently underestimated
 </center>
 
 ---
-title: GAFF fails for nonpolar dielectrics
-subtitle: Missing atomic polarizibilities
-
-Expt: 2.2
-GAFF: 1.0
+title:  Results do not depend on forcefield and benchmark set
 
 <center>
-<img height=400 src=figures/Carbon-tetrachloride-3D-balls.png />
+<img height=330 src=figures/dielectrics_virtual_chemistry_gaff_nocoff.png />
+<img height=330 src=figures/dielectrics_virtual_chemistry_opls_nocoff.png />
 </center>
 
 <footer class="source"> 
-Fennell, 2012
+Using data from virtualchemistry.org <br>
+van der Spoel, JCTC, 2011 and van der Spoel, Bioinformatics, 2012
 </footer>
 
-
 ---
-title: Polarizability Corrections
-
-Counting atoms explains molecular polarizability to within 2%
+title: Atom counting predicts molecular polarizability to within 2%
 
 <center>
-<img height=225 src=figures/polarizability_eqn.png />
+<img height=100 src=figures/sales_title.png />
 </center>
 
-<footer class="source"> 
-Sales, 2012.  J. Chem. Inf. Comp. Sci.
-</footer>
 
-Predicts a correction of 0.52 for water dielectric; compare to 0.79, which was used in developing TIP4P-EW.
+<center>
+<img height=230 src=figures/polarizability_eqn.png />
+</center>
 
 ---
-title: Static Dielectrics with Polarizibility
+title: Empirical polarizability reduces bias
 
 <center>
 <img height=525 src=figures/dielectrics_thermoml.png />
 </center>
 
 ---
-title: Conclusions
+title: Where do we go from here?
 
 - Small molecule forcefields need help
-- ThermoML is a NIST-funded, curated, and growing set of physicochem data
+- ThermoML is a NIST-funded, curated, and growing set of physicochemical data
 - We built a semi-automated benchmark of densities and dielectrics in ThermoML
-- Elemental polarizability models improves comparisons to measured dielectric constants
+- Empirical polarizability model improves comparisons to measured dielectric constants
 - Can we validate forcefields in real-time on all publication quality measurements?
 
 ---
-title: People
+title: Funding and Acknowledgments
+
+<center>
+<img height=100 src=logos/HaXZqYeq.png />
+</center>
 
 - Julie Behr (MSKCC)
 - Patrick Grinaway (MSKCC)
 - Bas Rustenburg (MSKCC)
 - John Chodera (MSKCC)
-- Michael Shirts (UVA)
 - Kenneth Kroenlein (NIST)
 
-
 <footer class="source"> 
-Special thanks to Vijay Pande, Lee-Ping Wang, Peter Eastman, Robert McGibbon, Jason Swails, David Mobley, Christopher Bayly, and members of Chodera lab. 
-
-See also work by van der Spoel, JCTC, 2011. and Bioinformatics, 2012.
+Also Vijay Pande, Lee-Ping Wang, Peter Eastman, Robert McGibbon, Jason Swails, David Mobley, Christopher Bayly, Michael Shirts, and the Chodera lab. 
 </footer>

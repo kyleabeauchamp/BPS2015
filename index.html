@@ -110,7 +110,7 @@ Lindorff-Larsen, PLOS One, 2012.  See also Beauchamp, JCTC, 2012.
 <img height=500 src=figures/mobley_dielectric.png />
 </center></p>
 <footer class="source"> 
-Fennell, Mobley, 2014
+Fennell, Mobley.  J. Phys. Chem. B. 2014
 </footer></article>
  
 </slide>
@@ -118,7 +118,7 @@ Fennell, Mobley, 2014
 <slide  >
   
     <hgroup>
-      <h2>Data access is hamstringing simulation</h2>
+      <h2>Data access is killing forcefields</h2>
       <h3></h3>
     </hgroup>
     <article ><ul>
@@ -138,7 +138,7 @@ See also work by Wang, Pande, Swope, Case, MacKerell, Ponder, Best, Hummer, Brus
   
     <!-- <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside> -->
     <hgroup class="auto-fadein">
-      <h2>WANTED: Curated, Machine-Readible, Open archive of physicochemical measurements!</h2>
+      <h2>WANTED: Reliable, machine-readible, open archive of physicochemical measurements!</h2>
       <h3></h3>
     </hgroup>
   
@@ -196,11 +196,15 @@ Figure from Chiraco, J. Chem. Eng. Dat., 2013.
 <slide  >
   
     <hgroup>
-      <h2>Density and dielectric as forcefield probes</h2>
+      <h2>Density and dielectric as forcefield tests</h2>
       <h3></h3>
     </hgroup>
-    <article ><p><mathjax>$$\rho = \langle \frac{M}{V} \rangle$$</mathjax></p>
-<p><mathjax>$$\epsilon(0) = 1 + \frac{4\pi}{3} \frac{\langle M \cdot M \rangle - \langle M \rangle \cdot \langle M \rangle}{V k_B T}$$</mathjax></p>
+    <article ><ul>
+<li>Sensitive to nonbonded parameters</li>
+<li>Simple geometric interpretation</li>
+</ul>
+<p><mathjax>$$\rho = \langle \frac{M}{V} \rangle$$</mathjax></p>
+<p><mathjax>$$\epsilon(0) = 1 + \frac{4\pi}{3} \frac{\langle \mu \cdot \mu \rangle - \langle \mu \rangle \cdot \langle \mu \rangle}{V k_B T}$$</mathjax></p>
 <footer class="source"> 
 See also van der Spoel, JCTC, 2011 and Fennell, 2012.
 </footer></article>
@@ -210,7 +214,7 @@ See also van der Spoel, JCTC, 2011 and Fennell, 2012.
 <slide  >
   
     <hgroup>
-      <h2>How many measurements?</h2>
+      <h2>How many measurements are there?</h2>
       <h3></h3>
     </hgroup>
     <article ><p><center>
@@ -222,12 +226,12 @@ See also van der Spoel, JCTC, 2011 and Fennell, 2012.
 <slide  >
   
     <hgroup>
-      <h2>Benchmarking 245 densities and dielectrics</h2>
+      <h2>Benchmarking neat liquid densities and dielectrics</h2>
       <h3></h3>
     </hgroup>
     <article ><ul>
 <li>OpenMM 6.2</li>
-<li>GAFF + AM1BCC (Antechamber + OpenEye)</li>
+<li>GAFF + AM1-BCC (Antechamber + OpenEye)</li>
 <li>PME + Langevin 1 fs + Monte Carlo Barostat + Fixed HBond</li>
 <li>Converge each density to 0.0002 g / mL (<mathjax>$\approx$</mathjax> expt. error)</li>
 </ul>
@@ -252,21 +256,6 @@ See also van der Spoel, JCTC, 2011 and Fennell, 2012.
 <slide  >
   
     <hgroup>
-      <h2>Density errors vary by functional group</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><p><center>
-<img height=475 src=./figures/functional_group_logerr_density.png />
-</center></p>
-<footer class="source"> 
-Compare to OW discussion in Fennell, Mobley, 2014
-</footer></article>
- 
-</slide>
-
-<slide  >
-  
-    <hgroup>
       <h2>Static dielectrics are consistently underestimated</h2>
       <h3></h3>
     </hgroup>
@@ -279,16 +268,16 @@ Compare to OW discussion in Fennell, Mobley, 2014
 <slide  >
   
     <hgroup>
-      <h2>GAFF fails for nonpolar dielectrics</h2>
-      <h3>Missing atomic polarizibilities</h3>
+      <h2>Results do not depend on forcefield and benchmark set</h2>
+      <h3></h3>
     </hgroup>
-    <article ><p>Expt: 2.2
-GAFF: 1.0</p>
-<p><center>
-<img height=400 src=figures/Carbon-tetrachloride-3D-balls.png />
+    <article ><p><center>
+<img height=330 src=figures/dielectrics_virtual_chemistry_gaff_nocoff.png />
+<img height=330 src=figures/dielectrics_virtual_chemistry_opls_nocoff.png />
 </center></p>
 <footer class="source"> 
-Fennell, 2012
+Using data from virtualchemistry.org <br>
+van der Spoel, JCTC, 2011 and van der Spoel, Bioinformatics, 2012
 </footer></article>
  
 </slide>
@@ -296,25 +285,22 @@ Fennell, 2012
 <slide  >
   
     <hgroup>
-      <h2>Polarizability Corrections</h2>
+      <h2>Atom counting predicts molecular polarizability to within 2%</h2>
       <h3></h3>
     </hgroup>
-    <article ><p>Counting atoms explains molecular polarizability to within 2%</p>
-<p><center>
-<img height=225 src=figures/polarizability_eqn.png />
+    <article ><p><center>
+<img height=100 src=figures/sales_title.png />
 </center></p>
-<footer class="source"> 
-Sales, 2012.  J. Chem. Inf. Comp. Sci.
-</footer>
-
-<p>Predicts a correction of 0.52 for water dielectric; compare to 0.79, which was used in developing TIP4P-EW.</p></article>
+<p><center>
+<img height=230 src=figures/polarizability_eqn.png />
+</center></p></article>
  
 </slide>
 
 <slide  >
   
     <hgroup>
-      <h2>Static Dielectrics with Polarizibility</h2>
+      <h2>Empirical polarizability reduces bias</h2>
       <h3></h3>
     </hgroup>
     <article ><p><center>
@@ -326,14 +312,14 @@ Sales, 2012.  J. Chem. Inf. Comp. Sci.
 <slide  >
   
     <hgroup>
-      <h2>Conclusions</h2>
+      <h2>Where do we go from here?</h2>
       <h3></h3>
     </hgroup>
     <article ><ul>
 <li>Small molecule forcefields need help</li>
-<li>ThermoML is a NIST-funded, curated, and growing set of physicochem data</li>
+<li>ThermoML is a NIST-funded, curated, and growing set of physicochemical data</li>
 <li>We built a semi-automated benchmark of densities and dielectrics in ThermoML</li>
-<li>Elemental polarizability models improves comparisons to measured dielectric constants</li>
+<li>Empirical polarizability model improves comparisons to measured dielectric constants</li>
 <li>Can we validate forcefields in real-time on all publication quality measurements?</li>
 </ul></article>
  
@@ -342,21 +328,21 @@ Sales, 2012.  J. Chem. Inf. Comp. Sci.
 <slide  >
   
     <hgroup>
-      <h2>People</h2>
+      <h2>Funding and Acknowledgments</h2>
       <h3></h3>
     </hgroup>
-    <article ><ul>
+    <article ><p><center>
+<img height=100 src=logos/HaXZqYeq.png />
+</center></p>
+<ul>
 <li>Julie Behr (MSKCC)</li>
 <li>Patrick Grinaway (MSKCC)</li>
 <li>Bas Rustenburg (MSKCC)</li>
 <li>John Chodera (MSKCC)</li>
-<li>Michael Shirts (UVA)</li>
 <li>Kenneth Kroenlein (NIST)</li>
 </ul>
 <footer class="source"> 
-Special thanks to Vijay Pande, Lee-Ping Wang, Peter Eastman, Robert McGibbon, Jason Swails, David Mobley, Christopher Bayly, and members of Chodera lab.
-
-See also work by van der Spoel, JCTC, 2011. and Bioinformatics, 2012.
+Also Vijay Pande, Lee-Ping Wang, Peter Eastman, Robert McGibbon, Jason Swails, David Mobley, Christopher Bayly, Michael Shirts, and the Chodera lab. 
 </footer></article>
  
 </slide>
