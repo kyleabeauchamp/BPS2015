@@ -139,7 +139,7 @@ title: Benchmarking neat liquid densities and dielectrics
 </center>
 
 <footer class="source"> 
-PME + Langevin 1 fs + Monte Carlo Barostat + Fixed HBond Constraints
+PME + Langevin 1 fs + Monte Carlo Barostat + Fixed HBond Constraints + 1000 molecules per box
 </footer>
 
 
