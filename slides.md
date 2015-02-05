@@ -90,7 +90,7 @@ title: Data Capture at NIST/TRC: ThermoML
 title: ThermoML is rapidly growing
 
 <center>
-<img height=475 src=figures/thermoml_by_time.png />
+<img height=475 src=figures/thermoml_by_time_new.png />
 </center>
 
 <footer class="source"> 
