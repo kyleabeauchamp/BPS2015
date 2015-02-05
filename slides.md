@@ -1,6 +1,6 @@
 % title: Benchmarking Small Molecule Forcefields at the Scale of NIST
 % author: Kyle A. Beauchamp, Choderalab@MSKCC
-% author: Slides here: goo.gl/u1l4Jy
+% author: Slides here: goo.gl/P1eMYb
 % favicon: figures/membrane.png
 
 ---
@@ -159,18 +159,6 @@ title:  Static dielectrics are consistently underestimated
 <img height=450 src=figures/dielectrics_thermoml_nocorr.png />
 </center>
 
----
-title:  Results do not depend on forcefield and benchmark set
-
-<center>
-<img height=330 src=figures/dielectrics_virtual_chemistry_gaff_nocoff.png />
-<img height=330 src=figures/dielectrics_virtual_chemistry_opls_nocoff.png />
-</center>
-
-<footer class="source"> 
-Using data from virtualchemistry.org <br>
-van der Spoel, JCTC, 2011 and van der Spoel, Bioinformatics, 2012
-</footer>
 
 ---
 title: Atom counting predicts molecular polarizability to within 2%
@@ -215,4 +203,18 @@ title: Funding and Acknowledgments
 
 <footer class="source"> 
 Also Vijay Pande, Lee-Ping Wang, Peter Eastman, Robert McGibbon, Jason Swails, David Mobley, Christopher Bayly, Michael Shirts, and the Chodera lab. 
+</footer>
+
+
+---
+title:  Results do not depend on forcefield and benchmark set
+
+<center>
+<img height=330 src=figures/dielectrics_virtual_chemistry_gaff_nocoff.png />
+<img height=330 src=figures/dielectrics_virtual_chemistry_opls_nocoff.png />
+</center>
+
+<footer class="source"> 
+Using data from virtualchemistry.org <br>
+van der Spoel, JCTC, 2011 and van der Spoel, Bioinformatics, 2012
 </footer>
