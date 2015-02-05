@@ -4,15 +4,24 @@
 % favicon: figures/membrane.png
 
 ---
-title: GPUs: MD Sampling is (finally) Easy
-subtitle: 128 ns / day on a $999 GTX Titan (DHFR, OpenMM 6.1)
+title: Goal: Predictive atomistic models
+subtitle: Proteins, drugs, ions, solvents, membranes
+
+<center>
+<img height=460 src=figures/dhfr.png />
+</center>
+
+
+---
+title: Molecular dynamics is (finally) fast
+subtitle: A \$999 GPU buys 128 ns / day on solvated proteins
 
 <center>
 <img height=420 src=figures/TitanNew.jpg />
 </center>
 
 <footer class="source"> 
-Benchmarks at openmm.org See also: Gromacs, AMBER, Charmm, NAMD, DESMOND, ACEMD
+GTX Titan, DHFR, OpenMM 6.1 (openmm.org) See also: Gromacs, AMBER, Charmm, NAMD, DESMOND, ACEMD
 </footer>
 
 
@@ -57,7 +66,7 @@ See also work by Wang, Pande, Swope, Case, MacKerell, Ponder, Best, Hummer, Brus
 
 
 ---
-title: WANTED: Reliable, machine-readible, open archive of physicochemical measurements!
+title: WANTED: Reliable, machine-readable, open archive of physicochemical measurements!
 class: segue dark nobackground
 
 
@@ -122,13 +131,17 @@ title: Benchmarking neat liquid densities and dielectrics
 
 - OpenMM 6.2
 - GAFF + AM1-BCC (Antechamber + OpenEye)
-- PME + Langevin 1 fs + Monte Carlo Barostat + Fixed HBond
 - Converge each density to 0.0002 g / mL ($\approx$ expt. error)
 
 
 <center>
 <img height=200 src=figures/openmm.png />
 </center>
+
+<footer class="source"> 
+PME + Langevin 1 fs + Monte Carlo Barostat + Fixed HBond Constraints
+</footer>
+
 
 ---
 title:  Densities are in the ballpark

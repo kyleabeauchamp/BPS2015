@@ -73,14 +73,26 @@ URL: https://code.google.com/p/io-2012-slides
 <slide  >
   
     <hgroup>
-      <h2>GPUs: MD Sampling is (finally) Easy</h2>
-      <h3>128 ns / day on a $999 GTX Titan (DHFR, OpenMM 6.1)</h3>
+      <h2>Goal: Predictive atomistic models</h2>
+      <h3>Proteins, drugs, ions, solvents, membranes</h3>
+    </hgroup>
+    <article ><p><center>
+<img height=460 src=figures/dhfr.png />
+</center></p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Molecular dynamics is (finally) fast</h2>
+      <h3>A \$999 GPU buys 128 ns / day on solvated proteins</h3>
     </hgroup>
     <article ><p><center>
 <img height=420 src=figures/TitanNew.jpg />
 </center></p>
 <footer class="source"> 
-Benchmarks at openmm.org See also: Gromacs, AMBER, Charmm, NAMD, DESMOND, ACEMD
+GTX Titan, DHFR, OpenMM 6.1 (openmm.org) See also: Gromacs, AMBER, Charmm, NAMD, DESMOND, ACEMD
 </footer></article>
  
 </slide>
@@ -138,7 +150,7 @@ See also work by Wang, Pande, Swope, Case, MacKerell, Ponder, Best, Hummer, Brus
   
     <!-- <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside> -->
     <hgroup class="auto-fadein">
-      <h2>WANTED: Reliable, machine-readible, open archive of physicochemical measurements!</h2>
+      <h2>WANTED: Reliable, machine-readable, open archive of physicochemical measurements!</h2>
       <h3></h3>
     </hgroup>
   
@@ -233,12 +245,14 @@ See also van der Spoel, JCTC, 2011 and Fennell, 2012.
     <article ><ul>
 <li>OpenMM 6.2</li>
 <li>GAFF + AM1-BCC (Antechamber + OpenEye)</li>
-<li>PME + Langevin 1 fs + Monte Carlo Barostat + Fixed HBond</li>
 <li>Converge each density to 0.0002 g / mL (<mathjax>$\approx$</mathjax> expt. error)</li>
 </ul>
 <p><center>
 <img height=200 src=figures/openmm.png />
-</center></p></article>
+</center></p>
+<footer class="source"> 
+PME + Langevin 1 fs + Monte Carlo Barostat + Fixed HBond Constraints
+</footer></article>
  
 </slide>
 
