@@ -208,16 +208,15 @@ Figure from Chiraco, J. Chem. Eng. Dat., 2013.
 <slide  >
   
     <hgroup>
-      <h2>Density and dielectric as forcefield tests</h2>
+      <h2>Density and dielectric constants as forcefield tests</h2>
       <h3></h3>
     </hgroup>
     <article ><ul>
 <li>Sensitive to nonbonded parameters</li>
 <li>Simple ensemble average geometric interpretation</li>
 </ul>
-<p>$$\rho = \langle \frac{M}{V} \rangle$$</p>
-<p>$$\epsilon = 1 + \frac{4\pi}{3} \frac{\langle \mu \cdot \mu \rangle - \langle \mu \rangle \cdot \langle \mu \rangle}{V k_B T}$$</p>
-<p>$$U = \frac{1}{4 \pi \epsilon} \frac{q_1 q_2}{r} \propto \frac{1}{\epsilon}$$</p>
+<p><mathjax>$$\rho = \langle \frac{M}{V} \rangle$$</mathjax></p>
+<p><mathjax>$$\epsilon = 1 + \frac{4\pi}{3} \frac{\langle \mu \cdot \mu \rangle - \langle \mu \rangle \cdot \langle \mu \rangle}{V k_B T}$$</mathjax></p>
 <footer class="source"> 
 See also van der Spoel, JCTC, 2011 and Fennell, 2012.
 </footer></article>
@@ -239,13 +238,13 @@ See also van der Spoel, JCTC, 2011 and Fennell, 2012.
 <slide  >
   
     <hgroup>
-      <h2>Benchmarking neat liquid densities and dielectrics</h2>
+      <h2>Benchmarking neat liquid densities and dielectric constants</h2>
       <h3></h3>
     </hgroup>
     <article ><ul>
 <li>OpenMM 6.2</li>
 <li>GAFF + AM1-BCC (Antechamber + OpenEye)</li>
-<li>Converge each density to 0.0002 g / mL ($\approx$ expt. error)</li>
+<li>Converge each density to 0.0002 g / mL (<mathjax>$\approx$</mathjax> expt. error)</li>
 </ul>
 <p><center>
 <img height=200 src=figures/openmm.png />
@@ -271,29 +270,22 @@ PME + Langevin 1 fs + Monte Carlo Barostat + Fixed HBond Constraints + 1000 mole
 <slide  >
   
     <hgroup>
-      <h2>Static dielectrics are consistently underestimated</h2>
+      <h2>Inverse dielectric constant is proportional to interaction strength</h2>
       <h3></h3>
     </hgroup>
-    <article ><p><center>
-<img height=450 src=figures/dielectrics_thermoml_nocorr.png />
-</center></p></article>
+    <article ><p><mathjax>$$U(r) = \frac{1}{4 \pi \epsilon} \frac{q_1 q_2}{r} \propto \frac{1}{\epsilon}$$</mathjax></p></article>
  
 </slide>
 
 <slide  >
   
     <hgroup>
-      <h2>Results do not depend on forcefield and benchmark set</h2>
+      <h2>Static dielectric constants are consistently underestimated</h2>
       <h3></h3>
     </hgroup>
     <article ><p><center>
-<img height=330 src=figures/dielectrics_virtual_chemistry_gaff_nocoff.png />
-<img height=330 src=figures/dielectrics_virtual_chemistry_opls_nocoff.png />
-</center></p>
-<footer class="source"> 
-Using data from virtualchemistry.org <br>
-van der Spoel, JCTC, 2011 and van der Spoel, Bioinformatics, 2012
-</footer></article>
+<img height=450 src=figures/dielectrics_thermoml_nocorr.png />
+</center></p></article>
  
 </slide>
 
@@ -333,7 +325,7 @@ van der Spoel, JCTC, 2011 and van der Spoel, Bioinformatics, 2012
     <article ><ul>
 <li>Small molecule forcefields need help</li>
 <li>ThermoML is a NIST-supported, machine-readable, and growing set of physicochemical data</li>
-<li>We built a semi-automated benchmark of densities and dielectrics in ThermoML</li>
+<li>We built a semi-automated benchmark of densities and dielectric constants in ThermoML</li>
 <li>Empirical polarizability model improves comparisons to measured dielectric constants</li>
 <li>Can we validate forcefields in real-time on all publication quality measurements?</li>
 </ul></article>
@@ -358,6 +350,23 @@ van der Spoel, JCTC, 2011 and van der Spoel, Bioinformatics, 2012
 </ul>
 <footer class="source"> 
 Also Vijay Pande, Lee-Ping Wang, Peter Eastman, Robert McGibbon, Jason Swails, David Mobley, Christopher Bayly, Michael Shirts, and the Chodera lab. 
+</footer></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Results do not depend on forcefield and benchmark set</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><center>
+<img height=330 src=figures/dielectrics_virtual_chemistry_gaff_nocoff.png />
+<img height=330 src=figures/dielectrics_virtual_chemistry_opls_nocoff.png />
+</center></p>
+<footer class="source"> 
+Using data from virtualchemistry.org <br>
+van der Spoel, JCTC, 2011 and van der Spoel, Bioinformatics, 2012
 </footer></article>
  
 </slide>

@@ -103,7 +103,7 @@ title: Can we leverage ThermoML for forcefield validation?
 class: segue dark nobackground
 
 ---
-title: Density and dielectric as forcefield tests
+title: Density and dielectric constants as forcefield tests
 
 - Sensitive to nonbonded parameters
 - Simple ensemble average geometric interpretation
@@ -111,8 +111,6 @@ title: Density and dielectric as forcefield tests
 $$\rho = \langle \frac{M}{V} \rangle$$
 
 $$\epsilon = 1 + \frac{4\pi}{3} \frac{\langle \mu \cdot \mu \rangle - \langle \mu \rangle \cdot \langle \mu \rangle}{V k_B T}$$
-
-$$U = \frac{1}{4 \pi \epsilon} \frac{q_1 q_2}{r} \propto \frac{1}{\epsilon}$$
 
 <footer class="source"> 
 See also van der Spoel, JCTC, 2011 and Fennell, 2012.
@@ -127,7 +125,7 @@ title: How many measurements are there?
 </center>
 
 ---
-title: Benchmarking neat liquid densities and dielectrics
+title: Benchmarking neat liquid densities and dielectric constants
 
 - OpenMM 6.2
 - GAFF + AM1-BCC (Antechamber + OpenEye)
@@ -150,10 +148,13 @@ title:  Densities are in the ballpark
 <img height=500 src=figures/densities_thermoml.png />
 </center>
 
+---
+title: Inverse dielectric constant is proportional to interaction strength
 
+$$U(r) = \frac{1}{4 \pi \epsilon} \frac{q_1 q_2}{r} \propto \frac{1}{\epsilon}$$
 
 ---
-title:  Static dielectrics are consistently underestimated
+title:  Static dielectric constants are consistently underestimated
 
 <center>
 <img height=450 src=figures/dielectrics_thermoml_nocorr.png />
@@ -184,7 +185,7 @@ title: Where do we go from here?
 
 - Small molecule forcefields need help
 - ThermoML is a NIST-supported, machine-readable, and growing set of physicochemical data
-- We built a semi-automated benchmark of densities and dielectrics in ThermoML
+- We built a semi-automated benchmark of densities and dielectric constants in ThermoML
 - Empirical polarizability model improves comparisons to measured dielectric constants
 - Can we validate forcefields in real-time on all publication quality measurements?
 
