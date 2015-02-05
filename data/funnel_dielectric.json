@@ -7,11 +7,11 @@
     },
     {
       "value":"1649",
-      "label":"Druglike Elements"
+      "label":"Druglike Elements (C, N, H, O, S, P, Cl, F)"
     },
     {
       "value":"1567",
-      "label":"Heavy Atoms"
+      "label":"<= 10 Heavy Atoms"
     },
     {
       "value":"461",
