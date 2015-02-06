@@ -1,6 +1,6 @@
 % title: Benchmarking Small Molecule Forcefields at the Scale of NIST
 % author: Kyle A. Beauchamp, Choderalab@MSKCC
-% author: Slides here: goo.gl/P1eMYb
+% author: Slides here: goo.gl/rKGhzZ
 % favicon: figures/membrane.png
 
 ---
