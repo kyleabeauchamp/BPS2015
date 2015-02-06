@@ -163,6 +163,14 @@ title:  Static dielectric constants are consistently underestimated
 
 
 ---
+title: Fixed charges fail to capture polarizability
+subtitle: Observed: $\epsilon \approx 2.0$, Predicted: $\epsilon \approx 1.0$
+
+<center>
+<img height=400 src=figures/nonpolar_molecules.png />
+</center>
+
+---
 title: Atom counting predicts molecular polarizability to within 2%
 
 <center>
