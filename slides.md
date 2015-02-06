@@ -57,7 +57,8 @@ title: Data access is killing forcefields
 - Most datasets are heterogeneous, offline, and static
 
 <center>
-<img height=350 src=figures/qc_supply_grinder_510482.jpg />
+<img height=325 src=figures/qc_supply_grinder_510482.jpg />
+<img height=300 src=figures/stack-of-old-books.jpg />
 </center>
 
 <footer class="source"> 
