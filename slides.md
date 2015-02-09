@@ -35,7 +35,7 @@ subtitle: Water and protein: getting better
 </center>
 
 <footer class="source"> 
-Lindorff-Larsen, PLOS One, 2012.  See also Beauchamp, JCTC, 2012.
+Lindorff-Larsen, PLOS One, 2012.  
 </footer>
 
 ---
@@ -196,7 +196,6 @@ title: Where do we go from here?
 - ThermoML is a NIST-supported, machine-readable, and growing set of physicochemical data
 - We built a semi-automated benchmark of densities and dielectric constants in ThermoML
 - Empirical polarizability model improves comparisons to measured dielectric constants
-- Can we validate forcefields in real-time on all publication quality measurements?
 
 ---
 title: Funding and Acknowledgments
