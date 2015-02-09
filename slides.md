@@ -84,7 +84,7 @@ title: Data Capture at NIST/TRC: ThermoML
 
 
 <center>
-<img height=540 src="https://docs.google.com/drawings/d/1At1SJcpKbbe28izMj3S4bodHuXtNe4dXiJpBX7Y_QkE/pub?w=1440&h=1080"/>
+<img height=540 src="figures/pipeline.png"/>
 </center>
 
 ---
