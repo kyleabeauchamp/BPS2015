@@ -74,7 +74,21 @@ URL: https://code.google.com/p/io-2012-slides
   
     <hgroup>
       <h2>Goal: Predictive atomistic models</h2>
-      <h3>Proteins, drugs, ions, solvents, membranes</h3>
+      <h3>Kinase inhibitor affinity, specificity, and properties</h3>
+    </hgroup>
+    <article ><div>
+<video id="sampleMovie" class="center" src="movies/shaw-dasatanib-2.mov" loop=\"true\ autoPlay=\"true\  width="512" height="384"></video>
+</div>
+
+<footer class="source"> Shan et al: J. Am. Chem. Soc. (2011). <a href="http://dx.doi.org/10.1021/ja202726y">DOI</a>. </footer></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Expensive models, complex forcefields</h2>
+      <h3></h3>
     </hgroup>
     <article ><p><center>
 <img height=460 src=figures/dhfr.png />
@@ -311,9 +325,11 @@ PME + Langevin 1 fs + Monte Carlo Barostat + Fixed HBond Constraints + 1000 mole
     <article ><p><center>
 <img height=100 src=figures/sales_title.png />
 </center></p>
-<p><center>
-<img height=230 src=figures/polarizability_eqn.png />
-</center></p></article>
+<p><mathjax>$$\alpha = 1.53 n_C + 0.17 n_H + 0.57 n_O + 1.05 n_N + 2.99 n_S + \\ 2.48 n_P + 0.22 n_F + 2.16 n_{Cl} + 0.32 $$</mathjax></p>
+<p><mathjax>$$\epsilon_{corrected} = \epsilon_{MD} + 4 \pi N  \frac{\alpha}{\langle V \rangle}$$</mathjax></p>
+<footer class="source"> 
+Sales, 2002
+</footer></article>
  
 </slide>
 
@@ -340,6 +356,7 @@ PME + Langevin 1 fs + Monte Carlo Barostat + Fixed HBond Constraints + 1000 mole
 <li>ThermoML is a NIST-supported, machine-readable, and growing set of physicochemical data</li>
 <li>We built a semi-automated benchmark of densities and dielectric constants in ThermoML</li>
 <li>Empirical polarizability model improves comparisons to measured dielectric constants</li>
+<li>Scale up, real-time???</li>
 </ul></article>
  
 </slide>

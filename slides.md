@@ -3,9 +3,20 @@
 % author: Slides here: goo.gl/rKGhzZ
 % favicon: figures/membrane.png
 
+
 ---
 title: Goal: Predictive atomistic models
-subtitle: Proteins, drugs, ions, solvents, membranes
+subtitle: Kinase inhibitor affinity, specificity, and properties
+
+<div>
+<video id="sampleMovie" class="center" src="movies/shaw-dasatanib-2.mov" loop=\"true\ autoPlay=\"true\  width="512" height="384"></video>
+</div>
+
+<footer class="source"> Shan et al: J. Am. Chem. Soc. (2011). <a href="http://dx.doi.org/10.1021/ja202726y">DOI</a>. </footer>
+
+
+---
+title: Expensive models, complex forcefields
 
 <center>
 <img height=460 src=figures/dhfr.png />
@@ -177,11 +188,14 @@ title: Atom counting predicts molecular polarizability to within 2%
 <img height=100 src=figures/sales_title.png />
 </center>
 
+$$\alpha = 1.53 n_C + 0.17 n_H + 0.57 n_O + 1.05 n_N + 2.99 n_S + \\ 2.48 n_P + 0.22 n_F + 2.16 n_{Cl} + 0.32 $$
 
-<center>
-<img height=230 src=figures/polarizability_eqn.png />
-</center>
+$$\epsilon_{corrected} = \epsilon_{MD} + 4 \pi N  \frac{\alpha}{\langle V \rangle}$$
 
+
+<footer class="source"> 
+Sales, 2002
+</footer>
 ---
 title: Empirical atomic polarizability corrections reduce bias
 
@@ -196,6 +210,7 @@ title: Where do we go from here?
 - ThermoML is a NIST-supported, machine-readable, and growing set of physicochemical data
 - We built a semi-automated benchmark of densities and dielectric constants in ThermoML
 - Empirical polarizability model improves comparisons to measured dielectric constants
+- Scale up, real-time???
 
 ---
 title: Funding and Acknowledgments
