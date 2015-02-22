@@ -32,7 +32,7 @@ subtitle: A \$999 GPU buys 128 ns / day on solvated proteins
 </center>
 
 <footer class="source"> 
-GTX Titan, DHFR, OpenMM 6.1 (openmm.org) See also: Gromacs, AMBER, Charmm, NAMD, DESMOND, ACEMD
+GTX Titan, DHFR, OpenMM 6.2 (openmm.org) See also: Gromacs, AMBER, Charmm, NAMD, DESMOND, ACEMD
 </footer>
 
 
@@ -175,7 +175,7 @@ title:  Static dielectric constants are consistently underestimated
 
 ---
 title: Fixed charges fail to capture polarizability
-subtitle: Observed: $\epsilon \approx 2.0$, Predicted: $\epsilon \approx 1.0$
+subtitle: Observed: $\epsilon \approx 2.0$, Predicted: $\epsilon \approx 1.0$, $\Delta \Delta G \approx$ 2 kcal / mol
 
 <center>
 <img height=400 src=figures/nonpolar_molecules.png />
@@ -206,11 +206,19 @@ title: Empirical atomic polarizability corrections reduce bias
 ---
 title: Where do we go from here?
 
+- Scale up, real-time simulation, web frontend
+- Perform new experiments in automated wetlab
+- Bayesian forcefield design
+- Polarizable forcefields
+
+
+---
+title: Conclusions
+
 - Small molecule forcefields need help
 - ThermoML is a NIST-supported, machine-readable, and growing set of physicochemical data
 - We built a semi-automated benchmark of densities and dielectric constants in ThermoML
 - Empirical polarizability model improves comparisons to measured dielectric constants
-- Scale up, real-time???
 
 ---
 title: Funding and Acknowledgments
@@ -227,18 +235,4 @@ title: Funding and Acknowledgments
 
 <footer class="source"> 
 Also Vijay Pande, Lee-Ping Wang, Peter Eastman, Robert McGibbon, Jason Swails, David Mobley, Christopher Bayly, Michael Shirts, and the Chodera lab. 
-</footer>
-
-
----
-title:  Results do not depend on forcefield and benchmark set
-
-<center>
-<img height=330 src=figures/dielectrics_virtual_chemistry_gaff_nocoff.png />
-<img height=330 src=figures/dielectrics_virtual_chemistry_opls_nocoff.png />
-</center>
-
-<footer class="source"> 
-Using data from virtualchemistry.org <br>
-van der Spoel, JCTC, 2011 and van der Spoel, Bioinformatics, 2012
 </footer>

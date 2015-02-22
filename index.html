@@ -106,7 +106,7 @@ URL: https://code.google.com/p/io-2012-slides
 <img height=420 src=figures/TitanNew.jpg />
 </center></p>
 <footer class="source"> 
-GTX Titan, DHFR, OpenMM 6.1 (openmm.org) See also: Gromacs, AMBER, Charmm, NAMD, DESMOND, ACEMD
+GTX Titan, DHFR, OpenMM 6.2 (openmm.org) See also: Gromacs, AMBER, Charmm, NAMD, DESMOND, ACEMD
 </footer></article>
  
 </slide>
@@ -308,7 +308,7 @@ PME + Langevin 1 fs + Monte Carlo Barostat + Fixed HBond Constraints + 1000 mole
   
     <hgroup>
       <h2>Fixed charges fail to capture polarizability</h2>
-      <h3>Observed: $\epsilon \approx 2.0$, Predicted: $\epsilon \approx 1.0$</h3>
+      <h3>Observed: $\epsilon \approx 2.0$, Predicted: $\epsilon \approx 1.0$, $\Delta \Delta G \approx$ 2 kcal / mol</h3>
     </hgroup>
     <article ><p><center>
 <img height=400 src=figures/nonpolar_molecules.png />
@@ -352,11 +352,25 @@ Sales, 2002
       <h3></h3>
     </hgroup>
     <article ><ul>
+<li>Scale up, real-time simulation, web frontend</li>
+<li>Perform new experiments in automated wetlab</li>
+<li>Bayesian forcefield design</li>
+<li>Polarizable forcefields</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Conclusions</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
 <li>Small molecule forcefields need help</li>
 <li>ThermoML is a NIST-supported, machine-readable, and growing set of physicochemical data</li>
 <li>We built a semi-automated benchmark of densities and dielectric constants in ThermoML</li>
 <li>Empirical polarizability model improves comparisons to measured dielectric constants</li>
-<li>Scale up, real-time???</li>
 </ul></article>
  
 </slide>
@@ -379,23 +393,6 @@ Sales, 2002
 </ul>
 <footer class="source"> 
 Also Vijay Pande, Lee-Ping Wang, Peter Eastman, Robert McGibbon, Jason Swails, David Mobley, Christopher Bayly, Michael Shirts, and the Chodera lab. 
-</footer></article>
- 
-</slide>
-
-<slide  >
-  
-    <hgroup>
-      <h2>Results do not depend on forcefield and benchmark set</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><p><center>
-<img height=330 src=figures/dielectrics_virtual_chemistry_gaff_nocoff.png />
-<img height=330 src=figures/dielectrics_virtual_chemistry_opls_nocoff.png />
-</center></p>
-<footer class="source"> 
-Using data from virtualchemistry.org <br>
-van der Spoel, JCTC, 2011 and van der Spoel, Bioinformatics, 2012
 </footer></article>
  
 </slide>
