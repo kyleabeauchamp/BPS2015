@@ -161,6 +161,11 @@ title:  Densities are in the ballpark
 <img height=500 src=figures/densities_thermoml.png />
 </center>
 
+
+<footer class="source"> 
+Beauchamp et al, In Preparation.
+</footer>
+
 ---
 title: Inverse dielectric constant is proportional to interaction strength
 
@@ -173,6 +178,9 @@ title:  Static dielectric constants are consistently underestimated
 <img height=450 src=figures/dielectrics_thermoml_nocorr.png />
 </center>
 
+<footer class="source"> 
+Beauchamp et al, In Preparation.
+</footer>
 
 ---
 title: Fixed charges fail to capture polarizability
@@ -204,6 +212,10 @@ title: Empirical atomic polarizability corrections reduce bias
 <center>
 <img height=450 src=figures/dielectrics_thermoml.png />
 </center>
+
+<footer class="source"> 
+Beauchamp et al, In Preparation.
+</footer>
 
 ---
 title: Where do we go from here?
