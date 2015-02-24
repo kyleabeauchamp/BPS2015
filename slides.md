@@ -176,7 +176,7 @@ title:  Static dielectric constants are consistently underestimated
 
 ---
 title: Fixed charges fail to capture polarizability
-subtitle: Observed: $\epsilon \approx 2.0$, Predicted: $\epsilon \approx 1.0$, $\Delta \Delta G \approx$ 2 kcal / mol
+subtitle: Observed: $\epsilon \approx 2.0$, Predicted: $\epsilon \approx 1.0$, $\Delta \Delta G_{solv} \approx$ 2 kcal / mol
 
 <center>
 <img height=400 src=figures/nonpolar_molecules.png />
@@ -197,6 +197,7 @@ $$\epsilon_{corrected} = \epsilon_{MD} + 4 \pi N  \frac{\alpha}{\langle V \rangl
 <footer class="source"> 
 Sales, 2002
 </footer>
+
 ---
 title: Empirical atomic polarizability corrections reduce bias
 
@@ -209,8 +210,12 @@ title: Where do we go from here?
 
 - Scale up, real-time simulation, web frontend
 - Perform new experiments in automated wetlab
-- Bayesian forcefield design
+- Bayesian (MCMC) forcefield / experimental design
 - Polarizable forcefields
+
+<center>
+<img height=250 src=figures/robot_image.jpg />
+</center>
 
 
 ---
