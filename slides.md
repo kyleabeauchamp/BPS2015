@@ -131,6 +131,7 @@ See also van der Spoel, JCTC, 2011 and Fennell, 2012.
 
 ---
 title: How many measurements are there?
+subtitle: Munging the ThermoML with pyxb and pandas
 
 <center>
 <img height=450 src=figures/funnel.png />
