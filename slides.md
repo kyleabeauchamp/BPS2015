@@ -141,7 +141,7 @@ subtitle: Munging the ThermoML with pyxb and pandas
 title: Benchmarking neat liquid densities and dielectric constants
 
 - OpenMM 6.2
-- GAFF + AM1-BCC (Antechamber + OpenEye)
+- GAFF / AM1-BCC (Antechamber + OpenEye)
 - Converge each density to 0.0002 g / mL ($\approx$ expt. error)
 
 
