@@ -73,47 +73,6 @@ URL: https://code.google.com/p/io-2012-slides
 <slide  >
   
     <hgroup>
-      <h2>Goal: Predictive atomistic models</h2>
-      <h3>Kinase inhibitor affinity, specificity, and properties</h3>
-    </hgroup>
-    <article ><div>
-<video id="sampleMovie" class="center" src="movies/shaw-dasatanib-2.mov" loop=\"true\ autoPlay=\"true\  width="512" height="384"></video>
-</div>
-
-<footer class="source"> Shan et al: J. Am. Chem. Soc. (2011). <a href="http://dx.doi.org/10.1021/ja202726y">DOI</a>. </footer></article>
- 
-</slide>
-
-<slide  >
-  
-    <hgroup>
-      <h2>Expensive models, complex forcefields</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><p><center>
-<img height=460 src=figures/dhfr.png />
-</center></p></article>
- 
-</slide>
-
-<slide  >
-  
-    <hgroup>
-      <h2>Molecular dynamics is (finally) fast</h2>
-      <h3>A \$999 GPU buys 128 ns / day on solvated proteins</h3>
-    </hgroup>
-    <article ><p><center>
-<img height=420 src=figures/TitanNew.jpg />
-</center></p>
-<footer class="source"> 
-GTX Titan, DHFR, OpenMM 6.2 (openmm.org) See also: Gromacs, AMBER, Charmm, NAMD, DESMOND, ACEMD
-</footer></article>
- 
-</slide>
-
-<slide  >
-  
-    <hgroup>
       <h2>Forcefields: Are we there yet?</h2>
       <h3>Water and protein: getting better</h3>
     </hgroup>
@@ -257,7 +216,7 @@ See also van der Spoel, JCTC, 2011 and Fennell, 2012.
       <h3></h3>
     </hgroup>
     <article ><ul>
-<li>OpenMM 6.2</li>
+<li>OpenMM 6.3</li>
 <li>GAFF / AM1-BCC (Antechamber + OpenEye)</li>
 <li>Converge each density to 0.0002 g / mL (<mathjax>$\approx$</mathjax> expt. error)</li>
 </ul>
@@ -288,21 +247,11 @@ Beauchamp et al, In Preparation.
 <slide  >
   
     <hgroup>
-      <h2>Inverse dielectric constant is proportional to interaction strength</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><p><mathjax>$$U(r) = \frac{1}{4 \pi \epsilon} \frac{q_1 q_2}{r} \propto \frac{1}{\epsilon}$$</mathjax></p></article>
- 
-</slide>
-
-<slide  >
-  
-    <hgroup>
       <h2>Static dielectric constants are consistently underestimated</h2>
       <h3></h3>
     </hgroup>
     <article ><p><center>
-<img height=450 src=figures/dielectrics_thermoml_nocorr.png />
+<img height=450 src=figures/dielectrics_thermoml_nocorr_logscale.png />
 </center></p>
 <footer class="source"> 
 Beauchamp et al, In Preparation.
@@ -314,7 +263,7 @@ Beauchamp et al, In Preparation.
   
     <hgroup>
       <h2>Fixed charges fail to capture polarizability</h2>
-      <h3>Observed: $\epsilon \approx 2.0$, Predicted: $\epsilon \approx 1.0$, $\Delta \Delta G_{solv} \approx$ 2 kcal / mol</h3>
+      <h3>Observed: $\epsilon \approx 2.2$, Predicted: $\epsilon \approx 1.001$, $\Delta \Delta G_{solv} \approx$ 2 kcal / mol</h3>
     </hgroup>
     <article ><p><center>
 <img height=400 src=figures/nonpolar_molecules.png />
@@ -346,10 +295,27 @@ Sales, 2002
       <h3></h3>
     </hgroup>
     <article ><p><center>
-<img height=450 src=figures/dielectrics_thermoml.png />
+<img height=450 src=figures/dielectrics_thermoml_logscale.png />
 </center></p>
 <footer class="source"> 
 Beauchamp et al, In Preparation.
+</footer></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Continuous integration of forcefields</h2>
+      <h3>Live update stream now available at trc.nist.gov/RSS/</h3>
+    </hgroup>
+    <article ><p><center>
+<img height=400 src=figures/xml_snapshot.png />
+</center></p>
+<footer class="source"> 
+https://github.com/choderalab/ThermoPyL
+<span style="display:inline-block; width: 15px;"></span>
+https://github.com/choderalab/LiquidBenchmark
 </footer></article>
  
 </slide>
@@ -383,7 +349,12 @@ Beauchamp et al, In Preparation.
 <li>ThermoML is a NIST-supported, machine-readable, and growing set of physicochemical data</li>
 <li>We built a semi-automated benchmark of densities and dielectric constants in ThermoML</li>
 <li>Empirical polarizability model improves comparisons to measured dielectric constants</li>
-</ul></article>
+</ul>
+<footer class="source"> 
+https://github.com/choderalab/ThermoPyL
+<span style="display:inline-block; width: 15px;"></span>
+https://github.com/choderalab/LiquidBenchmark
+</footer></article>
  
 </slide>
 

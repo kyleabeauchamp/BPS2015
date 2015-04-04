@@ -5,38 +5,6 @@
 
 
 ---
-title: Goal: Predictive atomistic models
-subtitle: Kinase inhibitor affinity, specificity, and properties
-
-<div>
-<video id="sampleMovie" class="center" src="movies/shaw-dasatanib-2.mov" loop=\"true\ autoPlay=\"true\  width="512" height="384"></video>
-</div>
-
-<footer class="source"> Shan et al: J. Am. Chem. Soc. (2011). <a href="http://dx.doi.org/10.1021/ja202726y">DOI</a>. </footer>
-
-
----
-title: Expensive models, complex forcefields
-
-<center>
-<img height=460 src=figures/dhfr.png />
-</center>
-
-
----
-title: Molecular dynamics is (finally) fast
-subtitle: A \$999 GPU buys 128 ns / day on solvated proteins
-
-<center>
-<img height=420 src=figures/TitanNew.jpg />
-</center>
-
-<footer class="source"> 
-GTX Titan, DHFR, OpenMM 6.2 (openmm.org) See also: Gromacs, AMBER, Charmm, NAMD, DESMOND, ACEMD
-</footer>
-
-
----
 title: Forcefields: Are we there yet?
 subtitle: Water and protein: getting better
 
@@ -140,7 +108,7 @@ subtitle: Munging the ThermoML with pyxb and pandas
 ---
 title: Benchmarking neat liquid densities and dielectric constants
 
-- OpenMM 6.2
+- OpenMM 6.3
 - GAFF / AM1-BCC (Antechamber + OpenEye)
 - Converge each density to 0.0002 g / mL ($\approx$ expt. error)
 
@@ -167,15 +135,10 @@ Beauchamp et al, In Preparation.
 </footer>
 
 ---
-title: Inverse dielectric constant is proportional to interaction strength
-
-$$U(r) = \frac{1}{4 \pi \epsilon} \frac{q_1 q_2}{r} \propto \frac{1}{\epsilon}$$
-
----
 title:  Static dielectric constants are consistently underestimated
 
 <center>
-<img height=450 src=figures/dielectrics_thermoml_nocorr.png />
+<img height=450 src=figures/dielectrics_thermoml_nocorr_logscale.png />
 </center>
 
 <footer class="source"> 
@@ -184,7 +147,7 @@ Beauchamp et al, In Preparation.
 
 ---
 title: Fixed charges fail to capture polarizability
-subtitle: Observed: $\epsilon \approx 2.0$, Predicted: $\epsilon \approx 1.0$, $\Delta \Delta G_{solv} \approx$ 2 kcal / mol
+subtitle: Observed: $\epsilon \approx 2.2$, Predicted: $\epsilon \approx 1.001$, $\Delta \Delta G_{solv} \approx$ 2 kcal / mol
 
 <center>
 <img height=400 src=figures/nonpolar_molecules.png />
@@ -210,12 +173,28 @@ Sales, 2002
 title: Empirical atomic polarizability corrections reduce bias
 
 <center>
-<img height=450 src=figures/dielectrics_thermoml.png />
+<img height=450 src=figures/dielectrics_thermoml_logscale.png />
 </center>
 
 <footer class="source"> 
 Beauchamp et al, In Preparation.
 </footer>
+
+---
+title: Continuous integration of forcefields
+subtitle: Live update stream now available at trc.nist.gov/RSS/
+
+
+<center>
+<img height=400 src=figures/xml_snapshot.png />
+</center>
+
+<footer class="source"> 
+https://github.com/choderalab/ThermoPyL
+<span style="display:inline-block; width: 15px;"></span>
+https://github.com/choderalab/LiquidBenchmark
+</footer>
+
 
 ---
 title: Where do we go from here?
@@ -237,6 +216,13 @@ title: Conclusions
 - ThermoML is a NIST-supported, machine-readable, and growing set of physicochemical data
 - We built a semi-automated benchmark of densities and dielectric constants in ThermoML
 - Empirical polarizability model improves comparisons to measured dielectric constants
+
+
+<footer class="source"> 
+https://github.com/choderalab/ThermoPyL
+<span style="display:inline-block; width: 15px;"></span>
+https://github.com/choderalab/LiquidBenchmark
+</footer>
 
 ---
 title: Funding and Acknowledgments
